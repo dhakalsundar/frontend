@@ -1,0 +1,260 @@
+/* Container styling */
+.user-table-container {
+    margin-top:50px ;
+    width: 80%;
+    margin-left: 7% ;
+    text-align: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+/* Title Styling */
+.table-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.user-table-container h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+/* Responsive Table Container */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table styling */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    min-width: 600px; /* Ensures table doesn't shrink too much */
+}
+
+/* Table header */
+.user-table thead {
+    background: #4CAF50;
+    color: white;
+}
+
+.user-table th {
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Table body */
+.user-table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.user-table tbody tr:hover {
+    background: rgba(76, 175, 80, 0.2);
+}
+
+/* Table cells */
+.user-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    text-align: center;
+}
+
+/* Buttons styling */
+.edit-button, .delete-button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 5px;
+    transition: background 0.3s ease;
+}
+
+.edit-button {
+    background: #ffa726;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #fb8c00;
+}
+
+.delete-button {
+    background: #e53935;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-table-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .user-table {
+        min-width: 100%;
+        overflow-x: auto;
+    }
+
+    .user-table th, .user-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .edit-button, .delete-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-title {
+        font-size: 22px;
+    }
+
+    .user-table-container h2 {
+        font-size: 18px;
+    }
+
+    .edit-button, .delete-button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
+
+
+/* User Table Styling */
+.user-table-container {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .user-table td {
+    background: #fff;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .edit-button {
+    background: #28a745;
+    color: white;
+  }
+  
+  .delete-button {
+    background: #dc3545;
+    color: white;
+  }
+  
+  /* Overlay Styling */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .overlay-content h2 {
+    margin-bottom: 15px;
+  }
+  
+  .overlay-content label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .overlay-content input,
+  .overlay-content select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .overlay-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .overlay-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .overlay-buttons button:first-child {
+    background: #28a745;
+    color: white;
+  }
+  
+  .overlay-buttons button:last-child {
+    background: #dc3545;
+    color: white;
+  }
+  

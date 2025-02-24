@@ -1,0 +1,107 @@
+/* Style for the Dashboard Sidebar */
+.dashboard-sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #ff9800, #ff5722); /* Warm food colors */
+  color: white;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto; /* Scrollable if content overflows */
+}
+
+/* Sidebar Title */
+.dashboard-sidebar h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2em;
+  color: #ffeb3b; /* Golden yellow */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navigation List */
+.dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Navigation Items */
+.dashboard-sidebar ul li {
+  margin-bottom: 12px;
+}
+
+/* Navigation Links */
+.dashboard-sidebar ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Add Icons */
+.dashboard-sidebar ul li a i {
+  margin-right: 12px;
+  font-size: 1.5em;
+}
+
+/* Hover Effect */
+.dashboard-sidebar ul li a:hover {
+  background: rgba(255, 235, 59, 0.8);
+  color: #4a2f20;
+  transform: scale(1.05);
+}
+
+/* Active Link */
+.active-link {
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+}
+
+/* Style for the content area */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 20px;
+  width: calc(100vw - 280px);
+  background-color: #fffbe7; /* Warm, food-friendly tone */
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 280px; /* Avoid overlap with sidebar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+      width: 250px;
+      left: -250px;
+      position: fixed;
+      transition: left 0.3s ease-in-out;
+  }
+
+  .dashboard-sidebar.open {
+      left: 0;
+  }
+
+  .dashboard-content {
+      margin-left: 0;
+      transition: margin-left 0.3s ease-in-out;
+  }
+
+  .dashboard-sidebar.open + .dashboard-content {
+      margin-left: 250px;
+  }
+}
