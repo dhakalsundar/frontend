@@ -86,13 +86,28 @@ const ProfilePage = () => {
 
       <form onSubmit={handleSubmit} className="profile-form">
       <div className="profile-picture-container">
- 
   <div className="profile-picture-preview">
-    <img
-      src={file ? URL.createObjectURL(file) : userData.profile_photo || 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Wamiqa_Gabbi_snapped_outside_Maddock_office_%282%29_%28cropped%29.jpg'}
-      alt="Profile"
-      className="profile-picture"
-    />
+    {file ? (
+      <img
+        src={URL.createObjectURL(file)}
+        alt="Profile"
+        className="profile-picture"
+      />
+    ) : userData.profile_photo ? (
+      <img
+        src={userData.profile_photo}
+        alt="Profile"
+        className="profile-picture"
+      />
+    ) : (
+      <img
+        src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
+          userData.name || "User"
+        )}&background=random&color=ffffff&size=100`}
+        alt="Default Avatar"
+        className="profile-picture"
+      />
+    )}
   </div>
   <label htmlFor="fileInput" className="file-label">Change Picture</label>
   <input
@@ -102,6 +117,7 @@ const ProfilePage = () => {
     className="file-input"
   />
 </div>
+
 
         <div className="input-group">
           <label>Name</label>

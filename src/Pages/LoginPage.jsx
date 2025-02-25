@@ -17,9 +17,12 @@ const LoginPage = () => {
       const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
       
       // If login is successful, redirect to the dashboard or another page
-      if (response.data.token) {
-        console.log(response.data.user.id);
+      if (response) {
+        console.log(response.data.user.roleId);
         localStorage.setItem('userID', response.data.user.id);  // Save userID in localStorage
+        localStorage.setItem("roleId",response.data.user.roleId); // Get roleId from localStorage
+        console.log()
+        console.log(response)
 
         localStorage.setItem('authToken', response.data.token);  // Save token to localStorage
         alert("Login Successfull")

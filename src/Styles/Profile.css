@@ -117,10 +117,10 @@ button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
 }
-
+/* 
 input[type="file"] {
   display: none;
-}
+} */
 
 input[type="file"] + label {
   display: inline-block;

@@ -61,6 +61,20 @@ const UserTable = () => {
     }
   };
 
+  const handleDeleteUser = async (id) => {
+    if (window.confirm("Are you sure you want to delete this user?")) {
+      try {
+        await axios.delete(`http://localhost:5000/api/users/delete-user/${id}`);
+  
+        // Update state to remove the deleted user
+        setUsers((prevUsers) => prevUsers.filter((user) => user.id !== id));
+      } catch (error) {
+        console.error("Error deleting user:", error);
+      }
+    }
+  };
+  
+
   return (
     <div className="user-table-container">
       <h1 className="table-title">👥 User Management</h1>
@@ -89,9 +103,10 @@ const UserTable = () => {
                       <button className="edit-button" onClick={() => openEditForm(user)}>
                         Edit
                       </button>
-                      <button className="delete-button">
-                        Delete
-                      </button>
+                      <button className="delete-button" onClick={() => handleDeleteUser(user.id)}>
+  Delete
+</button>
+
                     </td>
                   </tr>
                 ))
