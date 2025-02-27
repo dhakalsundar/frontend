@@ -11,7 +11,6 @@ import UserTable from "./Pages/UserTable";
 import AddRecipeTable from "./Pages/AddRecipeTable";
 import { Outlet } from "react-router-dom";
 import AdminDashboard from "./Pages/Admin Dashboard";
-import FeedbackTable from "./Pages/Feedback";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="editprofile" element={<ProfilePage />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="Feedback" element={<FeedbackTable/>} />
           <Route path="usertable" element={<UserTable />} />
           <Route path="addrecipetable" element={<AddRecipeTable />} />
         </Route>
@@ -40,7 +38,6 @@ function App() {
           <Route path="profile" element={<ProfilePage />} />
           <Route path="editprofile" element={<ProfilePage />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="Feedback" element={<FeedbackTable/>} />
           <Route path="usertable" element={<UserTable />} />
           <Route path="addrecipetable" element={<AddRecipeTable />} />
         </Route>

@@ -35,13 +35,7 @@ const Dashboard = () => {
             </NavLink>
 
           </li>
-          <NavLink
-              to="/dashboard/feedback"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Feedback
-            </NavLink>
-          
+       
 
           {/* Show these links only if roleId is "2" (Admin) */}
           {roleId === "2" && (
